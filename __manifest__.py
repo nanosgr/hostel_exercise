@@ -14,6 +14,7 @@
     'data': [
         "security/hostel_security.xml",
         "security/ir.model.access.csv",
+        "data/data.xml",
         "views/hostel.xml",
     ],
 }
