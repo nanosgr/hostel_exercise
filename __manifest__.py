@@ -6,6 +6,7 @@
         format (description is Deprecated),
         """,
     'author': "Sebastian Rios",
+    "license": "LGPL-3",
     'sequence': -105,
     'website': "http://www.example.com",
     'category': 'Uncategorized',

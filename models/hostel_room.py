@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
 
 class HostelRoom(models.Model):
@@ -24,7 +24,7 @@ class HostelRoom(models.Model):
     student_per_room = fields.Integer("Student Per Room", required=True, help="Students allocated per room")
     availability = fields.Float(compute="_compute_check_availability", store=True, string="Availability", help="Room availability in hostel")
 
-    _sql_constraints = [("room_no_unique", "unique(room_no)", "Room number must be unique!")]
+    _sql_constraints = [("room_no_unique", "unique(room_no, hostel_id)", "Room number must be unique!")]
 
     @api.constrains("rent_amount")
     def _check_rent_amount(self):
